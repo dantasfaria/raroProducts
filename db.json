@@ -2,31 +2,31 @@
   "products": [
     {
       "id": 1,
-      "name": "meu vassalo",
+      "name": "Iphone",
       "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
-      "quantity": 2,
-      "price": 299.50
+      "quantity": 30,
+      "price": 4.500
     },
     {
       "id": 2,
       "name": "Product 1",
       "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
-      "quantity": 2,
-      "price": 299.50
+      "quantity": 30,
+      "price": 4.500
     },
     {
       "id": 3,
       "name": "Product 1",
       "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
-      "quantity": 2,
-      "price": 299.50
+      "quantity": 30,
+      "price": 4.500
     },
     {
       "id": 4,
       "name": "Product 1",
       "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
-      "quantity": 2,
-      "price": 299.50
+      "quantity": 30,
+      "price": 4.500
     }
   ]
 }

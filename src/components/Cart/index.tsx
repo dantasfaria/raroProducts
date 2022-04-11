@@ -27,7 +27,7 @@ const MenuPayment = ({ isOpen, setIsOpen }: MenuPaymentProps) => (
       </Typography>
       <CloseOutline onClick={() => setIsOpen(false)} />
     </Header>
-
+  
     <Subtotal>
       <Typography level={5} size="large" fontWeight={600}>
         Total
