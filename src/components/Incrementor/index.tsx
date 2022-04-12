@@ -13,6 +13,11 @@ const Incrementor = ({ id, picture, name, price, quantity, amount }: ProductProp
   const cart = useGlobalCart(state => state.cart)
   const productIncrementor = useGlobalCart(state => state.productIncrementor)
 
+  useEffect(() => {
+    setAmount(amount)
+  }, [amount])
+
+
   const addHandleClick = () => {
 
     if(checkIfAdded(id)) {

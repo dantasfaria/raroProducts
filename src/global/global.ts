@@ -6,12 +6,15 @@ type globalProps = {
     addToCart: (product: ProductProps) => void
     removeFromCart: (product: ProductProps) => void
     productIncrementor: (product: ProductProps) => void
+    reload: boolean 
 };
 
 const useGlobalCart = create<globalProps>((set) => ({
     cart: [],
+    reload: false,
     addToCart: (product) => set(({cart}) => {
         cart.push(product)
+        set(({ reload }) => ({ reload: !reload }))
     }),
 
     removeFromCart: (product) => set(({cart}) => {
@@ -24,6 +27,7 @@ const useGlobalCart = create<globalProps>((set) => ({
         });
 
         set(({ cart }) => ({ cart: newList }))
+        set(({ reload }) => ({ reload: !reload }))
     }),
 
     productIncrementor: (product) => set(({cart}) => {
@@ -31,6 +35,7 @@ const useGlobalCart = create<globalProps>((set) => ({
         cart.forEach(function(item, index) {
             if(product.id == item.id) {
                 cart.splice(index, 1, product)
+                set(({ reload }) => ({ reload: !reload }))
             }
         })
     })

@@ -15,6 +15,7 @@ export type MenuPaymentProps = {
 
 const MenuPayment = ({ isOpen, setIsOpen }: MenuPaymentProps) => {
   const cart = useGlobalCart(state => state.cart)
+  const reload = useGlobalCart(state => state.reload)
   
   const mapCart = () => {
     return cart.map((product) => (

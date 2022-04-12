@@ -10,6 +10,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [products, setProducts] = useState<ProductProps[]>([]);
   const cart = useGlobalCart(state => state.cart)
+  const reload = useGlobalCart(state => state.reload)
 
   useEffect(() => {
     getData()
@@ -22,25 +23,25 @@ const Home = () => {
 
   const mapProducts = () => {
     return products.map((product) => (
-      <Product {...product} amount={checkIfAdded(product.id) ? product.quantity : 0}/>
+      <Product {...product} amount={0}/>
     ))
   }
 
-  const checkIfAdded = (id: number) => {
-    for(let i=0; i < cart.length; i++) {
-      if(cart[i].id == id) {
-        return true
-      }
-    }
+  // const checkIfAdded = (id: number) => {
+  //   for(let i=0; i < cart.length; i++) {
+  //     if(cart[i].id == id) {
+  //       return true
+  //     }
+  //   }
 
-    return false
-  }
+  //   return false
+  // }
 
   return (
     <>
       <Header setIsOpen={setIsOpen} />
       <Container>
-        {(isOpen || !isOpen) && mapProducts()}
+        {mapProducts()}
         <Cart isOpen={isOpen} setIsOpen={setIsOpen} />
       </Container>
     </>
